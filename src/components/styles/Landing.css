@@ -211,10 +211,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.landing-h2-info-1 {
-  position: absolute;
-  top: 0;
-}
+
 h2.landing-info-h2 {
   color: #5eead4;
   font-size: 42px;
@@ -224,10 +221,13 @@ h2.landing-info-h2 {
   font-weight: 600;
   position: relative;
   margin-left: -5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .landing-h2-2 {
   position: absolute;
-  top: 0;
+  top: 100%;
 }
 .landing-info-h2::after {
   content: "";
