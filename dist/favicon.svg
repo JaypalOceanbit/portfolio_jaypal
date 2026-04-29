@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1e1c"/>
+      <stop offset="100%" stop-color="#0b080c"/>
+    </linearGradient>
+    <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#5eead4"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+
+  <!-- Border -->
+  <rect x="1" y="1" width="30" height="30" rx="6.5" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+    <!-- Accent corner dots -->
+  <circle cx="4" cy="4" r="1" fill="rgba(94,234,212,0.5)"/>
+  <circle cx="28" cy="28" r="1" fill="rgba(94,234,212,0.5)"/>
+  
+  <!-- JD text with glow -->
+  <text
+    x="16" y="22"
+    font-family="Georgia, 'Palatino Linotype', serif"
+    font-size="16"
+    font-weight="700"
+    font-style="italic"
+    fill="url(#fg)"
+    text-anchor="middle"
+    filter="url(#glow)"
+    letter-spacing="0.5"
+  >JD</text>
+</svg>
