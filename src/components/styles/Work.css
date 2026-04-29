@@ -1,0 +1,228 @@
+/* ── Section ── */
+.work-section {
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+.work-container {
+  width: var(--cWidth);
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Heading — matches Career exactly ── */
+.work-heading {
+  padding: 120px 0 80px;
+  text-align: center;
+}
+.work-section h2 {
+  font-size: 70px;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+  background: linear-gradient(0deg, #0d9488, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0;
+}
+.work-section h2 > span {
+  font-weight: 300;
+}
+
+/* ── Grid ── */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.work-grid-extra {
+  padding-top: 20px;
+}
+
+/* ── Extra expand ── */
+.work-extra {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+.work-extra-open {
+  grid-template-rows: 1fr;
+}
+.work-extra > div {
+  overflow: hidden;
+}
+
+/* ── Card ── */
+.work-card {
+  background: #0e0c10;
+  border: 1px solid #1e1e1e;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease, border-color 0.3s, box-shadow 0.35s;
+  cursor: default;
+}
+.work-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(94, 234, 212, 0.28);
+  box-shadow: 0 20px 56px rgba(94, 234, 212, 0.07), 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Image ── */
+.work-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #161418;
+  flex-shrink: 0;
+}
+.work-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75);
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+.work-card:hover .work-card-img-wrap img {
+  transform: scale(1.06);
+  filter: brightness(0.9);
+}
+
+/* ── Body ── */
+.work-card-num {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+
+/* ── Body ── */
+.work-card-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+.work-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-card-cat {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  opacity: 0.8;
+}
+.work-card-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  color: #ddd8e4;
+  line-height: 1.35;
+  transition: color 0.25s;
+}
+.work-card:hover .work-card-title {
+  color: var(--accentColor);
+}
+.work-card-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: #666;
+  margin: 0;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.work-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 6px;
+}
+.work-tag {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 2px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  color: #eae5ec;
+  letter-spacing: 0.3px;
+}
+
+/* ── View All button ── */
+.work-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+.work-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: 1px solid #2a2a2a;
+  background: transparent;
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-family: "Geist", sans-serif;
+  transition: border-color 0.25s, background 0.25s, color 0.25s, transform 0.2s;
+}
+.work-view-btn:hover {
+  border-color: var(--accentColor);
+  background: rgba(94, 234, 212, 0.07);
+  color: var(--accentColor);
+  transform: translateY(-2px);
+}
+.work-btn-arrow {
+  display: flex;
+  font-size: 16px;
+  transition: transform 0.35s ease;
+}
+.work-btn-arrow-up {
+  transform: rotate(90deg);
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 1024px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .work-section h2 {
+    font-size: 55px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+  .work-section h2 {
+    font-size: 42px;
+  }
+  .work-heading {
+    padding: 70px 0 50px;
+  }
+}
