@@ -4,5 +4,6 @@ declare module "gsap-trial/SplitText" {
       chars: any[];
       words: any[];
       lines: any[];
+        revert: () => void;
     }
   }
